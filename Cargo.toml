@@ -1,0 +1,26 @@
+[package]
+name = "jericho"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "jericho"
+path = "src/jericho/main.rs"
+
+[[bin]]
+name = "jericho_daemon"
+path = "src/jericho_daemon/main.rs"
+
+
+[dependencies]
+anyhow = "1.0.75"
+chrono = "0.4.31"
+clap = { version = "4.4.11", features = ["derive"] }
+daemonize = "0.5.0"
+dialog = "0.3.0"
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
+toml = "0.8.8"
+uuid = { version = "1.6.1", features = ["v4"] }
+which = "3.1"
